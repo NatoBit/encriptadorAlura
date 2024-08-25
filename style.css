@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');  
+
+
+:root {
+    --background-color: #F3F5FC;
+    --text-main-color: #0A3871;    
+    --text-secondary-color: #343A40;
+    --text-tertiary-color: #495057;
+    --button-main-color: #0A3871;
+    --button-secondary-color: #5A8DC1;
+}
+body {
+    font-family: Poppins, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.header {
+    position: absolute;
+    height: 48;
+    width: 120;
+    padding: 40px 0 0 40px;
+}
+
+.cuerpo {
+    display: flex;
+    justify-content: center;
+}
+.cuerpo__general {
+    padding: 128px 0 0 0;
+}
+#cuerpo__general__mensaje {
+    width: 50vw; 
+    height: 60vh;
+    padding: 10px;
+    font-size: 2em;
+    border: none;           
+    background-color: var(--background-color);      
+    overflow: auto;  
+}
+#doll {
+    width: 20vw;
+}
+.cuerpo__barra__lateral h2 {
+    font-size: 1.5rem;
+    color: var(--text-tertiary-color);
+    padding: 0 2.25vw 0 2.25vw;
+    margin: 5px;
+}
+.cuerpo__barra__lateral p {
+    font-size: 1rem;
+    color: var(--text-secondary-color);
+    padding: 0 2.25vw 0 2.25vw;
+    margin: 5px;
+}
+
+.barra__lateral__contenido {
+    display: none;
+}
+.active {
+    width: 28vw; 
+    height: 90vh;
+    margin: 40px 0 0 7.5vw; 
+    background-color: white;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--text-main-color);
+}
+
+#estandar {
+    text-align: center;
+}
+#encriptado {
+    padding: 40px;
+    justify-content: space-between;
+    text-align: left;
+}
+
+
+.warning {
+    color: #d9534f; /* Color rojo para resaltar */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    margin: 10px 0;
+}
+.warning-symbol {
+    background-color: #d9534f; /* Fondo rojo para el círculo */
+    color: white;
+    border-radius: 50%; /* Hace que sea circular */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.cuerpo__general__botones {
+    display: flex;
+    justify-content: center; 
+}
+.boton {
+    width: 260px;
+    padding: 15px;
+    margin: 0 1vw 0 1vw;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 15px;
+    font-size: 1rem;
+    background-color: var(--button-main-color);
+    color: white;
+}
+.boton:hover {
+    background-color: var(--button-secondary-color);
+}
+
+@media (max-width: 1024px) {
+    .cuerpo {
+        flex-direction: column;
+        align-items: center;
+    }
+    #cuerpo__general__mensaje {
+        width: 90vw;
+        height: 40vh;
+    }
+    .barra__lateral__contenido {
+        margin: 20px 0 0 0; /* Elimina el margen lateral y ajusta el margen superior */
+        width: 90vw;
+        height: 30vh;
+    }
+    #doll {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .cuerpo__general__botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .boton {
+        margin: 1vw;
+    }
+}
